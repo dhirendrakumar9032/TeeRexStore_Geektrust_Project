@@ -1,4 +1,6 @@
-import {fetchData} from './script/data.js';
 
+import { fetchData } from "./script/data.js";
 
 fetchData();
+
+
