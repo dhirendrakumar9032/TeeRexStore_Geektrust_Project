@@ -11,65 +11,61 @@
       <h3>TeeRexStore</h3>
       <div class="product-cart">
         <div class="product">Products</div>
-        <div class="cart">
+        <div id="count-tag" class="cart">
           <img src="resources/icons/shopping-cart.png" />
-          <div class="count-tag">12</div>
+          <div id="cart-item" class="count-tag">0</div>
         </div>
       </div>
     </nav>
     <div class="search-container">
       <div class="search">
-        <input type="text" placeholder="Search for products" />
+        <input id="search-input" type="text" placeholder="Search for products" />
       </div>
-      <button><img src="resources/icons/search-icon.png" /></button>
+      <button id="search-btn"><img src="resources/icons/search-icon.png" /></button>
     </div>
     <div class="container">
       <div class="filter">
         <div class="color-filter">
           <h3>Color</h3>
-          <ul class="filter-checkbox">
-            <li><input type="checkbox" />Red</li>
-            <li><input type="checkbox" />Blue</li>
-            <li><input type="checkbox" />Green</li>
+          <ul class="filter-checkbox" id="filter-by-color">
+            <li><input type="checkbox" value="red"/>Red</li>
+            <li><input type="checkbox" value="blue" />Blue</li>
+            <li><input type="checkbox" value="green"/>Green</li>
           </ul>
         </div>
         <div class="color-filter">
           <h3>Gender</h3>
-          <ul class="filter-checkbox">
-            <li><input type="checkbox" />Men</li>
-            <li><input type="checkbox" />Women</li>
+          <ul class="filter-checkbox" id="filter-by-gender">
+            <li><input type="checkbox" value="men" />Men</li>
+            <li><input type="checkbox" value="women" />Women</li>
           </ul>
         </div>
         <div class="color-filter">
           <h3>Price</h3>
-          <ul class="filter-checkbox">
-            <li><input type="checkbox" />0 - Rs 250</li>
-            <li><input type="checkbox" />Rs 251 - 450</li>
-            <li><input type="checkbox" />Rs 451</li>
+          <ul class="filter-checkbox" id="filter-by-price">
+            <li><input type="checkbox" value="250" />0 - Rs 250</li>
+            <li><input type="checkbox" value="251" />Rs 251 - 450</li>
+            <li><input type="checkbox" value="451" />Rs 451</li>
           </ul>
         </div>
         <div class="color-filter">
           <h3>Type</h3>
-          <ul class="filter-checkbox">
-            <li><input type="checkbox" />Polo</li>
-            <li><input type="checkbox" />Hoodie</li>
-            <li><input type="checkbox" />Basic</li>
+          <ul class="filter-checkbox" id="filter-by-type">
+            <li><input type="checkbox" value="polo" />Polo</li>
+            <li><input type="checkbox" value="hoodie" />Hoodie</li>
+            <li><input type="checkbox" value="basic" />Basic</li>
           </ul>
         </div>
       </div>
-      <div id="items-container" class="items-container">
-        <div class="item">
-          <img
-            src="https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/white-hoodie-women.png"
-          />
-          <div class="item-details">
-            <h3>Red T-shirt</h3>
-            <div class="add-cart">
-              <p>Rs 250</p>
-              <button>Add to cart</button>
-            </div>
-          </div>
+      
+      <div class="products">
+        <div id="items-container" class="items-container"></div>
+        <div class="no-data" id="nodata">
+          <img src="./resources/icons/nodata.jpg" />
+          <h3>No Data Found</h3>
+          <p>No data found for the given search criteria.</p
         </div>
+      </div>
       </div>
     </div>
   </body>
